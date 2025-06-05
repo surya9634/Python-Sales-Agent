@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: surya-bot
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: FACEBOOK_APP_ID
+        value: YOUR_APP_ID
+      - key: FACEBOOK_APP_SECRET
+        value: YOUR_APP_SECRET
+      - key: GROQ_API_KEY
+        value: YOUR_GROQ_KEY
+      - key: WEBHOOK_VERIFY_TOKEN
+        value: YOUR_WEBHOOK_SECRET
+      - key: REDIRECT_URI_OVERRIDE
+        value: https://surya-bot.onrender.com/oauth-callback
