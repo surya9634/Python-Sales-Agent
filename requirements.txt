@@ -1,6 +1,7 @@
 Flask
-python-dotenv
+gunicorn
 requests
+python-dotenv
 facebook_business
 groq
 pyngrok
